@@ -7,6 +7,7 @@ add_executable(algorithm_dojo
         main.cpp
         pretty_print.h
         base.h
+        template_matrix.h
         2.add-two-numbers.cpp
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
