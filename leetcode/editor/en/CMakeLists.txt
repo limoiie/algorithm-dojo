@@ -10,6 +10,7 @@ add_executable(algorithm_dojo
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
         327.count-of-range-sum.cpp
+        329.longest-increasing-path-in-a-matrix.cpp
         )
 
 enable_testing()

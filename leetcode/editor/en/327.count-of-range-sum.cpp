@@ -84,7 +84,7 @@ TEST(TestCountOfRangeSum, testcase) {
 
     auto cases = vector<tuple<vector<int>, int, int, int>>{
 //            {{-2, 5, -1}, -2, 2, 3},
-            {{0, 2, 1, 3, 4}, 3, 3, 2},
+            {{0, 2, 1, 3, 4}, 3, 3, 3},
     };
 
     for (auto & c : cases) {
