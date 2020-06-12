@@ -50,32 +50,6 @@ struct ListNode {
 };
 
 
-class Node {
-public:
-    int val;
-    Node *left;
-    Node *right;
-    Node *next;
-
-    Node() : Node(0, nullptr, nullptr, nullptr) {}
-
-    explicit Node(int val) : Node(val, nullptr, nullptr, nullptr) {}
-
-    Node(int val_, Node *left_, Node *right_, Node *next_)
-            : val(val_), left(left_), right(right_), next(next_) {}
-
-    bool operator==(const Node &rhs) const {
-        return val == rhs.val &&
-               *left == *rhs.left &&
-               *right == *rhs.right &&
-               *next == *rhs.next;
-    }
-
-    bool operator!=(const Node &rhs) const {
-        return !(rhs == *this);
-    }
-};
-
 struct TreeNode {
     int val;
     TreeNode *left;
