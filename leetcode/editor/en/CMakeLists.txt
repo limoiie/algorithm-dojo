@@ -9,6 +9,7 @@ add_executable(algorithm_dojo
         base.h
         template_matrix.h
         2.add-two-numbers.cpp
+        116.populating-next-right-pointers-in-each-node.cpp
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
         327.count-of-range-sum.cpp
