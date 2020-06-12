@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="algorithm_dojo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\Downloads\;CMake Files\..\..\..\..\..\..\Downloads\opensource\;CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\;CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\scripts\;CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\scripts\buildsystems\;CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\;CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\x64-osx\;CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\x64-osx\share\;CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\x64-osx\share\gtest\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="algorithm_dojo">
+				<Option output="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/algorithm_dojo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ligengwang/Downloads/opensource/vcpkg/installed/x64-osx/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 algorithm_dojo"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="algorithm_dojo/fast">
+				<Option output="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/algorithm_dojo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ligengwang/Downloads/opensource/vcpkg/installed/x64-osx/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 algorithm_dojo/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/2.add-two-numbers.cpp">
+			<Option target="algorithm_dojo"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/299.bulls-and-cows.cpp">
+			<Option target="algorithm_dojo"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/321.create-maximum-number.cpp">
+			<Option target="algorithm_dojo"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/327.count-of-range-sum.cpp">
+			<Option target="algorithm_dojo"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/base.h">
+			<Option target="algorithm_dojo"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/main.cpp">
+			<Option target="algorithm_dojo"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/../../../../../../Downloads/opensource/vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\scripts\buildsystems\"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/../../../../../../Downloads/opensource/vcpkg/installed/x64-osx/share/gtest/GTestConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\x64-osx\share\gtest\"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/../../../../../../Downloads/opensource/vcpkg/installed/x64-osx/share/gtest/GTestConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\x64-osx\share\gtest\"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/../../../../../../Downloads/opensource/vcpkg/installed/x64-osx/share/gtest/GTestTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\x64-osx\share\gtest\"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/../../../../../../Downloads/opensource/vcpkg/installed/x64-osx/share/gtest/GTestTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\x64-osx\share\gtest\"/>
+		</Unit>
+		<Unit filename="/Users/ligengwang/Projects/clion/algorithm-dojo/leetcode/editor/en/../../../../../../Downloads/opensource/vcpkg/installed/x64-osx/share/gtest/GTestTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Downloads\opensource\vcpkg\installed\x64-osx\share\gtest\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
