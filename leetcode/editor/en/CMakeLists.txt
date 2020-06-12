@@ -17,6 +17,7 @@ add_executable(algorithm_dojo
         129.sum-root-to-leaf-numbers.cpp
         132.palindrome-partitioning-ii.cpp
         138.copy-list-with-random-pointer.cpp
+        146.lru-cache.cpp
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
         327.count-of-range-sum.cpp
