@@ -12,6 +12,8 @@
 #include <set>
 #include <tuple>
 
+#include "pretty_print.h"
+
 using namespace std;
 
 struct ListNode {

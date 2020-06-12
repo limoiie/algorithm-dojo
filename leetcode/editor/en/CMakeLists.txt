@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(algorithm_dojo
         main.cpp
+        pretty_print.h
         base.h
         2.add-two-numbers.cpp
         299.bulls-and-cows.cpp
