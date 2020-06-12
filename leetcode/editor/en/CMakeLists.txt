@@ -13,6 +13,7 @@ add_executable(algorithm_dojo
         117.populating-next-right-pointers-in-each-node-ii.cpp
         119.pascals-triangle-ii.cpp
         124.binary-tree-maximum-path-sum.cpp
+        125.valid-palindrome.cpp
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
         327.count-of-range-sum.cpp
