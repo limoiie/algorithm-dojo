@@ -22,6 +22,18 @@ add_executable(algorithm_dojo
         224.basic-calculator.cpp
         226.invert-binary-tree.cpp
         227.basic-calculator-ii.cpp
+        229.majority-element-ii.cpp
+        230.kth-smallest-element-in-a-bst.cpp
+        231.power-of-two.cpp
+        232.implement-queue-using-stacks.cpp
+        233.number-of-digit-one.cpp
+        234.palindrome-linked-list.cpp
+        235.lowest-common-ancestor-of-a-binary-search-tree.cpp
+        236.lowest-common-ancestor-of-a-binary-tree.cpp
+        237.delete-node-in-a-linked-list.cpp
+        240.search-a-2d-matrix-ii.cpp
+        241.different-ways-to-add-parentheses.cpp
+        242.valid-anagram.cpp
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
         327.count-of-range-sum.cpp
