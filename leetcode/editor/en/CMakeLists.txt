@@ -19,6 +19,7 @@ add_executable(algorithm_dojo
         138.copy-list-with-random-pointer.cpp
         146.lru-cache.cpp
         187.repeated-dna-sequences.cpp
+        224.basic-calculator.cpp
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
         327.count-of-range-sum.cpp
