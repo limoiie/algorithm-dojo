@@ -20,6 +20,8 @@ add_executable(algorithm_dojo
         146.lru-cache.cpp
         187.repeated-dna-sequences.cpp
         224.basic-calculator.cpp
+        226.invert-binary-tree.cpp
+        227.basic-calculator-ii.cpp
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
         327.count-of-range-sum.cpp
