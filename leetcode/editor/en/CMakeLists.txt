@@ -34,6 +34,13 @@ add_executable(algorithm_dojo
         240.search-a-2d-matrix-ii.cpp
         241.different-ways-to-add-parentheses.cpp
         242.valid-anagram.cpp
+        273.integer-to-english-words.cpp
+        274.h-index.cpp
+        275.h-index-ii.cpp
+        278.first-bad-version.cpp
+        282.expression-add-operators.cpp
+        284.peeking-iterator.cpp
+        292.nim-game.cpp
         299.bulls-and-cows.cpp
         321.create-maximum-number.cpp
         327.count-of-range-sum.cpp
