@@ -56,14 +56,15 @@
 class Solution {
     int target_;
 public:
-    vector<string> addOperators(string const& num, int target) {
+    vector<string> addOperators(string const &num, int target) {
         auto res = vector<string>();
         this->target_ = target;
         dfs(res, num, num.substr(0, 1), 1);
         return res;
     }
 
-    void dfs(vector<string>& res, string const& num, string const& exp, int start) {
+    void
+    dfs(vector<string> &res, string const &num, string const &exp, int start) {
         if (start == num.size()) {
             if (eval(exp) == this->target_)
                 res.push_back(exp);
@@ -72,13 +73,42 @@ public:
         dfs(res, num, exp + "+" + num.substr(start, 1), start + 1);
         dfs(res, num, exp + "-" + num.substr(start, 1), start + 1);
         dfs(res, num, exp + "*" + num.substr(start, 1), start + 1);
-        if (start == 0 || num[start-1] == '0') return;
+        if (start == 0 || num[start - 1] == '0') return;
         dfs(res, num, exp + num.substr(start, 1), start + 1);
     }
 
-    int eval(string const& exp) {
-//        todo
-        return 0;
+    int eval(string const &exp) {
+        auto opts = stack<char>();
+        auto nums = stack<int>();
+        for (auto i = 0; i < exp.size(); ++i) {
+            switch (auto const c = exp[i]) {
+                case '+': case '-': case '*':
+                    pop(opts, nums, c); opts.push(c); break;
+                default:
+                    size_t len;
+                    nums.push(stoi(exp.substr(i), &len));
+                    i += len - 1;
+            }
+        }
+        pop(opts, nums, '+');
+        return nums.top();
+    }
+
+    void pop(stack<char>& opts, stack<int>& nums, char c) {
+        static auto priorities = map<char, int>{
+                {'+', 1}, {'-', 1}, {'*', 2}
+        };
+        auto const priority = priorities[c];
+        while (!opts.empty() && priorities[opts.top()] >= priority) {
+            auto const rhs = nums.top(); nums.pop();
+            auto const lhs = nums.top(); nums.pop();
+            switch (opts.top()) {
+                case '+': nums.push(lhs + rhs); break;
+                case '-': nums.push(lhs - rhs); break;
+                case '*': nums.push(lhs * rhs); break;
+            }
+            opts.pop();
+        }
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
@@ -88,11 +118,12 @@ TEST(TestExpressionAddOperators, testcase) {
     auto sol = Solution();
 
     auto cases = vector<tuple<string, int, vector<string>>>{
-            {"105", 5, {}},
-            {"123", 6, {}}
+            {"105", 5, {"1*0+5","10-5"}},
+            {"123", 6, {"1+2+3", "1*2*3"}},
+            {"232", 8, {"2+3*2", "2*3+2"}}
     };
 
-    for (auto & c : cases) {
+    for (auto &c : cases) {
         cout << "testing " << c << "..." << endl;
         auto result = sol.addOperators(get<0>(c), get<1>(c));
         auto expect = get<2>(c);
