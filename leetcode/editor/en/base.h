@@ -2,6 +2,8 @@
 #define ALGORITHM_DOJO_BASE_H
 
 #include <iostream>
+#include <memory.h>
+#include <numeric>
 #include <string>
 #include <algorithm>
 #include <memory>
@@ -14,6 +16,7 @@
 #include <set>
 #include <unordered_set>
 #include <tuple>
+#include <climits>
 
 #include "pretty_print.h"
 

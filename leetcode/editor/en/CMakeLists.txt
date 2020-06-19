@@ -63,6 +63,13 @@ add_executable(algorithm_dojo
 #        375.guess-number-higher-or-lower-ii.cpp
 #        378.kth-smallest-element-in-a-sorted-matrix.cpp
 #        392.is-subsequence.cpp
+#        410.split-array-largest-sum.cpp
+#        446.arithmetic-slices-ii-subsequence.cpp
+#        467.unique-substrings-in-wraparound-string.cpp
+#        516.longest-palindromic-subsequence.cpp
+        517.super-washing-machines.cpp
+        523.continuous-subarray-sum.cpp
+        552.student-attendance-record-ii.cpp
         )
 
 enable_testing()
