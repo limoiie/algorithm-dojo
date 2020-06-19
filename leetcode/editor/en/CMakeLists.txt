@@ -62,6 +62,7 @@ add_executable(algorithm_dojo
 #        374.guess-number-higher-or-lower.cpp
 #        375.guess-number-higher-or-lower-ii.cpp
 #        378.kth-smallest-element-in-a-sorted-matrix.cpp
+#        392.is-subsequence.cpp
         )
 
 enable_testing()
