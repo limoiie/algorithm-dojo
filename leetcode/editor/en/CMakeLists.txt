@@ -66,10 +66,26 @@ add_executable(algorithm_dojo
 #        410.split-array-largest-sum.cpp
 #        446.arithmetic-slices-ii-subsequence.cpp
 #        467.unique-substrings-in-wraparound-string.cpp
+#        472.concatenated-words.cpp
 #        516.longest-palindromic-subsequence.cpp
-        517.super-washing-machines.cpp
-        523.continuous-subarray-sum.cpp
-        552.student-attendance-record-ii.cpp
+#        517.super-washing-machines.cpp
+#        523.continuous-subarray-sum.cpp
+#        552.student-attendance-record-ii.cpp
+#        576.out-of-boundary-paths.cpp
+#        600.non-negative-integers-without-consecutive-ones.cpp
+#        638.shopping-offers.cpp
+#        647.palindromic-substrings.cpp
+#        673.number-of-longest-increasing-subsequence.cpp
+#        688.knight-probability-in-chessboard.cpp
+#        689.maximum-sum-of-3-non-overlapping-subarrays.cpp
+#        691.stickers-to-spell-word.cpp
+#        714.best-time-to-buy-and-sell-stock-with-transaction-fee.cpp
+#        718.maximum-length-of-repeated-subarray.cpp
+#        730.count-different-palindromic-subsequences.cpp
+#        740.delete-and-earn.cpp
+#        741.cherry-pickup.cpp
+#        746.min-cost-climbing-stairs.cpp
+        1349.maximum-students-taking-exam.cpp
         )
 
 enable_testing()
