@@ -62,17 +62,29 @@ add_executable(algorithm_dojo
 #        374.guess-number-higher-or-lower.cpp
 #        375.guess-number-higher-or-lower-ii.cpp
 #        378.kth-smallest-element-in-a-sorted-matrix.cpp
+#        380.insert-delete-getrandom-o1.cpp
 #        392.is-subsequence.cpp
 #        410.split-array-largest-sum.cpp
+#        414.third-maximum-number.cpp
 #        446.arithmetic-slices-ii-subsequence.cpp
 #        467.unique-substrings-in-wraparound-string.cpp
 #        472.concatenated-words.cpp
+#        485.max-consecutive-ones.cpp
+#        495.teemo-attacking.cpp
 #        516.longest-palindromic-subsequence.cpp
 #        517.super-washing-machines.cpp
 #        523.continuous-subarray-sum.cpp
+#        532.k-diff-pairs-in-an-array.cpp
 #        552.student-attendance-record-ii.cpp
+#        560.subarray-sum-equals-k.cpp
+#        561.array-partition-i.cpp
+#        565.array-nesting.cpp
+#        566.reshape-the-matrix.cpp
 #        576.out-of-boundary-paths.cpp
+#        581.shortest-unsorted-continuous-subarray.cpp
 #        600.non-negative-integers-without-consecutive-ones.cpp
+        605.can-place-flowers.cpp
+#        611.valid-triangle-number.cpp
 #        638.shopping-offers.cpp
 #        647.palindromic-substrings.cpp
 #        673.number-of-longest-increasing-subsequence.cpp
@@ -85,7 +97,7 @@ add_executable(algorithm_dojo
 #        740.delete-and-earn.cpp
 #        741.cherry-pickup.cpp
 #        746.min-cost-climbing-stairs.cpp
-        1349.maximum-students-taking-exam.cpp
+#        1349.maximum-students-taking-exam.cpp
         )
 
 enable_testing()
