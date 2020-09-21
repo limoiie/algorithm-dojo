@@ -8,6 +8,7 @@
 #include <memory>
 #include <vector>
 #include <list>
+#include <array>
 #include <stack>
 #include <queue>
 #include <map>
@@ -16,6 +17,7 @@
 #include <unordered_set>
 #include <tuple>
 #include <climits>
+#include <random>
 
 #include "pretty_print.h"
 

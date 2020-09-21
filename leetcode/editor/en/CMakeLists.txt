@@ -1,7 +1,16 @@
 cmake_minimum_required(VERSION 3.15)
 project(algorithm_dojo)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
+
+add_definitions(
+        -D_CRT_SECURE_NO_WARNINGS    # used for ignore vs secure warning
+        -D_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING            # used for ignore tr1 namespace deprecation warning
+        -D_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING
+        -D_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING  # used for ignore deprecation warning about filesystem
+        -DNOMINMAX
+        -D_HAS_STD_BYTE=0
+)
 
 add_executable(algorithm_dojo
         main.cpp
@@ -45,7 +54,18 @@ add_executable(algorithm_dojo
 #        321.create-maximum-number.cpp
 #        327.count-of-range-sum.cpp
 #        329.longest-increasing-path-in-a-matrix.cpp
+#        383.ransom-note.cpp
+#        384.shuffle-an-array.cpp
+#        385.mini-parser.cpp
+#        386.lexicographical-numbers.cpp
+#        387.first-unique-character-in-a-string.cpp
+#        388.longest-absolute-file-path.cpp
+#        389.find-the-difference.cpp
+#        409.longest-palindrome.cpp
 #        410.split-array-largest-sum.cpp
+#        421.maximum-xor-of-two-numbers-in-an-array.cpp
+#        423.reconstruct-original-digits-from-english.cpp
+        424.longest-repeating-character-replacement.cpp
 #        446.arithmetic-slices-ii-subsequence.cpp
 #        467.unique-substrings-in-wraparound-string.cpp
 #        516.longest-palindromic-subsequence.cpp
@@ -54,10 +74,14 @@ add_executable(algorithm_dojo
         552.student-attendance-record-ii.cpp
         )
 
-#enable_testing()
-#
-#find_package(GTest CONFIG REQUIRED)
-#target_link_libraries(algorithm_dojo
-#        PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-#
-#add_test(AllTestsInMain algorithm_dojo)
+find_package(cpp-common CONFIG REQUIRED)
+target_link_libraries(algorithm_dojo
+        PRIVATE cpp-common-static)
+
+enable_testing()
+
+find_package(GTest CONFIG REQUIRED)
+target_link_libraries(algorithm_dojo
+        PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
+
+add_test(AllTestsInMain algorithm_dojo)
