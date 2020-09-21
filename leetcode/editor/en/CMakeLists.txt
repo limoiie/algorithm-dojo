@@ -74,10 +74,6 @@ add_executable(algorithm_dojo
         552.student-attendance-record-ii.cpp
         )
 
-find_package(cpp-common CONFIG REQUIRED)
-target_link_libraries(algorithm_dojo
-        PRIVATE cpp-common-static)
-
 enable_testing()
 
 find_package(GTest CONFIG REQUIRED)

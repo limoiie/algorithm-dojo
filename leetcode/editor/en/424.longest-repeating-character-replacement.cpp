@@ -57,10 +57,5 @@ public:
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
-#include <cpp-common/FileDir.h>
-
-TEST(TestCase, tc) {
-    auto x = string();
-    np_limo::file::dir::GetHomeDir(x);
-    cout << x << endl;
-}
+//TEST(TestCase, tc) {
+//}
