@@ -1,5 +1,3 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "cert-dcl58-cpp"
 //
 // Created on 2020/6/12.
 //

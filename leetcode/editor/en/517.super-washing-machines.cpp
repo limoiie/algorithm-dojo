@@ -1,7 +1,3 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "cert-err58-cpp"
-#pragma ide diagnostic ignored "readability-convert-member-functions-to-static"
-
 //#include <gtest/gtest.h>
 #include "base.h"
 

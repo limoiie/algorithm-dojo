@@ -2,3 +2,5 @@
 .vs/
 cmake-build-*/
 out/
+
+all.json

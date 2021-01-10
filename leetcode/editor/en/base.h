@@ -19,6 +19,8 @@
 #include <climits>
 #include <random>
 
+#include <gtest/gtest.h>
+
 #include "pretty_print.h"
 
 using namespace std;
