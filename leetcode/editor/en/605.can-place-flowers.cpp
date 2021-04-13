@@ -40,8 +40,32 @@
 class Solution {
 public:
     bool canPlaceFlowers(vector<int>& flowerbed, int n) {
-        
+        auto head = 0, i = 0;
+        while (i < flowerbed.size() and flowerbed[i] == 0) {
+            ++head, ++i;
+        }
+
+        if (head == flowerbed.size()) return how_much(head) >= n;
+
+        auto res = head > 0 ? how_much(head - 1) : 0;
+        auto blank = 0;
+        while (i < flowerbed.size()) {
+            if (flowerbed[i]) {
+                if (blank > 1)
+                    res += how_much(blank - 2);
+                blank = -1;
+            }
+            ++blank, ++i;
+        }
+        return res + (blank > 0 ? how_much(blank - 1) : 0) >= n;
     }
+
+private:
+    inline
+    int how_much(int const n) {
+        return (int) (static_cast<unsigned>(n + 1) >> 1u);
+    }
+
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
@@ -49,14 +73,14 @@ public:
 TEST(TestCanPlaceFlowers, testcase) {
     auto sol = Solution();
 
-    auto cases = vector<tuple<..>>{
-            {},
+    auto cases = vector<tuple<vector<int>, int, bool>>{
+            {{1,0,0,0,1}, 3, false},
     };
 
     for (auto & c : cases) {
         cout << "testing " << c << "..." << endl;
-        auto result = sol.foo(get<0>(c));
-        auto expect = get<1>(c);
+        auto result = sol.canPlaceFlowers(get<0>(c), get<1>(c));
+        auto expect = get<2>(c);
         ASSERT_EQ(result, expect);
     }
 }

@@ -34,7 +34,23 @@
 class Solution {
 public:
     int triangleNumber(vector<int>& nums) {
-        
+        sort(nums.begin(), nums.end());
+
+        auto res = 0;
+        for (auto i = 0; i < nums.size(); ++i) {
+            auto j = i + 1, k = i + 2;
+            while (j < nums.size() and k < nums.size()) {
+                if (j == k) {
+                    ++k;
+                } else if (nums[i] + nums[j] > nums[k]) {
+                    res += k - j;
+                    ++k;
+                } else {
+                    ++j;
+                }
+            }
+        }
+        return res;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
@@ -43,13 +59,13 @@ public:
 TEST(TestValidTriangleNumber, testcase) {
     auto sol = Solution();
 
-    auto cases = vector<tuple<..>>{
-            {},
+    auto cases = vector<tuple<vector<int>, int>>{
+            {{3,3,3,3}, 3},
     };
 
     for (auto & c : cases) {
         cout << "testing " << c << "..." << endl;
-        auto result = sol.foo(get<0>(c));
+        auto result = sol.triangleNumber(get<0>(c));
         auto expect = get<1>(c);
         ASSERT_EQ(result, expect);
     }
