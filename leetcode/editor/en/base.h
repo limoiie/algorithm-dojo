@@ -15,6 +15,7 @@
 #include <unordered_map>
 #include <set>
 #include <unordered_set>
+#include <bitset>
 #include <tuple>
 #include <climits>
 #include <random>
@@ -22,6 +23,10 @@
 #include <gtest/gtest.h>
 
 #include "pretty_print.h"
+
+#ifndef __PRETTY_FUNCTION__
+#define __PRETTY_FUNCTION__ __FUNCTION__
+#endif
 
 using namespace std;
 
