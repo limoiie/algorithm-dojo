@@ -77,9 +77,13 @@ add_executable(algorithm_dojo
 #    467.unique-substrings-in-wraparound-string.cpp
 #    481.magical-string.cpp
 #    482.license-key-formatting.cpp
-    483.smallest-good-base.cpp
+#    483.smallest-good-base.cpp
+    488.zuma-game.cpp
+    491.increasing-subsequences.cpp
+#    492.construct-the-rectangle.cpp
 #    516.longest-palindromic-subsequence.cpp
 #    517.super-washing-machines.cpp
+#    520.detect-capital.cpp
 #    523.continuous-subarray-sum.cpp
 #    552.student-attendance-record-ii.cpp
     )
