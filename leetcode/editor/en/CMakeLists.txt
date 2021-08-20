@@ -110,6 +110,7 @@ add_executable(algorithm_dojo
     # 638.shopping-offers.cpp
     # 647.palindromic-substrings.cpp
     # 673.number-of-longest-increasing-subsequence.cpp
+    684.redundant-connection.cpp
     # 688.knight-probability-in-chessboard.cpp
     # 689.maximum-sum-of-3-non-overlapping-subarrays.cpp
     # 691.stickers-to-spell-word.cpp
