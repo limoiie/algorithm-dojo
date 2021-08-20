@@ -10,42 +10,56 @@
 class Solution {
 public:
     vector<int> findRedundantConnection(vector<vector<int>>& edges) {
-        auto cache = std::map<int, std::shared_ptr<std::set<int>>>();
-        for (auto const& edge : edges) {
-            auto const i = edge[0], j = edge[1];
-            auto pi = cache.find(i);
-            auto pj = cache.find(j);
-            if (pi == cache.end() && pj == cache.end()) {
-                auto set = std::make_shared<std::set<int>>();
-                set->insert(i);
-                set->insert(j);
-                cache[i] = cache[j] = set;
-            } else if (pi != cache.end()) {
-                pi->second->insert(j);
-                cache[j] = pi->second;
-            } else if (pj != cache.end()) {
-                pj->second->insert(i);
-                cache[i] = pj->second;
-            } else {
-            //    todo
-            }
+        parent.resize(edges.size() + 1, 0);
+        for (auto i = 0; i < parent.size(); ++i) {
+            parent[i] = i;
         }
+        for (auto const& edge : edges) {
+            if (_union(edge[0], edge[1]))
+                return edge;
+        }
+        return {};
     }
+
+    [[nodiscard]] int _find(int const x) {
+        if (parent[x] != x) {
+            return parent[x] = _find(parent[x]);
+        }
+        return x;
+    }
+
+    bool _union(int const x, int const y) {
+        auto const px = _find(x);
+        auto const py = _find(y);
+        if (px == py) return true;
+        parent[px] = py;
+        return false;
+    }
+
+private:
+    vector<int> parent {};
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-// TEST(TestRedundantConnection, testcase) {
-//     auto sol = Solution();
-// 
-//     auto cases = vector<tuple<..>>{
-//             {},
-//     };
-// 
-//     for (auto & c : cases) {
-//         cout << "testing " << c << "..." << endl;
-//         auto result = sol.foo(get<0>(c));
-//         auto expect = get<1>(c);
-//         ASSERT_EQ(result, expect);
-//     }
-// }
+TEST(TestRedundantConnection, testcase) {
+    auto sol = Solution();
+
+    auto cases = vector<tuple<vector<vector<int>>, vector<int>>>{
+            {
+                    {{1,2}, {1,3}, {2,3}},
+                    {2,3}
+            },
+            {
+                    {{1,2}, {2,3}, {3,4}, {1,4}, {1,5}},
+                    {1,4}
+            }
+    };
+
+    for (auto & c : cases) {
+        cout << "testing " << c << "..." << endl;
+        auto result = sol.findRedundantConnection(get<0>(c));
+        auto expect = get<1>(c);
+        ASSERT_EQ(result, expect);
+    }
+}
