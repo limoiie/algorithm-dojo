@@ -1,6 +1,9 @@
-#include "base.h"
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cert-err58-cpp"
+#pragma ide diagnostic ignored "readability-convert-member-functions-to-static"
 
 #include <gtest/gtest.h>
+#include "base.h"
 
 //Given a string s that consists of only uppercase English letters, you can perf
 //orm at most k operations on that string. 
@@ -45,17 +48,41 @@
 //
 // 
 // Related Topics Two Pointers Sliding Window 
-// 👍 1457 👎 84
+// 👍 1557 👎 87
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
-    int characterReplacement(string s, int k) {
-        return 0;
+    int characterReplacement(string const& s, int k) {
+        auto cnt = vector(26, 0);
+        auto max_len = 0, start = 0, most = 0;
+        for (auto i = 0; i < s.size(); ++i) {
+            most = max(most, ++cnt[s[i] - 'A']);
+            if (i - start + 1 > most + k) {
+                --cnt[s[start] - 'A'];
+                ++start;
+            }
+            max_len = max(max_len, i - start + 1);
+        }
+        return max_len;
     }
+
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
-//TEST(TestCase, tc) {
-//}
+
+ TEST(TestLongestRepeatingCharacterReplacement, testcase) {
+     auto sol = Solution();
+
+     auto cases = vector<tuple<string, int, int>>{
+             {"AABA", 0, 2},
+     };
+
+     for (auto & c : cases) {
+         cout << "testing " << c << "..." << endl;
+         auto result = sol.characterReplacement(get<0>(c), get<1>(c));
+         auto expect = get<2>(c);
+         ASSERT_EQ(result, expect);
+     }
+ }

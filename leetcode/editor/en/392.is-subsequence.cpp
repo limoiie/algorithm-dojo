@@ -43,24 +43,35 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
-    bool isSubsequence(string s, string t) {
-        
+    bool isSubsequence(string const& s, string const& t) {
+        auto i = 0;
+        for (auto const c : s) {
+            auto cat = false;
+            while (i < t.size()) {
+                if (c == t[i++]) {
+                    cat = true;
+                    break;
+                }
+            }
+            if (not cat) return false;
+        }
+        return true;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-TEST(TestLowestCommonAncestorOfABinarySearchTree, testcase) {
+TEST(TestIsSubsequence, testcase) {
     auto sol = Solution();
 
-    auto cases = vector<tuple<TreeNode*, TreeNode*, TreeNode*, TreeNode*>>{
-            {},
+    auto cases = vector<tuple<string, string, bool>>{
+            {"ace", "abcde", true},
     };
 
     for (auto & c : cases) {
         cout << "testing " << c << "..." << endl;
-        auto result = sol.lowestCommonAncestor(get<0>(c), get<1>(c), get<2>(c));
-        auto expect = get<3>(c);
+        auto result = sol.isSubsequence(get<0>(c), get<1>(c));
+        auto expect = get<2>(c);
         ASSERT_EQ(result, expect);
     }
 }

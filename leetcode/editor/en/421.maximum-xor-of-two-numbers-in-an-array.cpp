@@ -1,4 +1,10 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cert-err58-cpp"
+#pragma ide diagnostic ignored "readability-convert-member-functions-to-static"
+
+#include <gtest/gtest.h>
 #include "base.h"
+
 //Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai < 231. 
 //
 //
@@ -22,62 +28,26 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-struct Trie {
-    Trie *left;
-    Trie *right;
-};
-
 class Solution {
 public:
-    void insert(Trie *root, unsigned val) const {
-        for (auto i = 32u; i > 0; --i) {
-            if ((val >> (i - 1)) & 1u) {
-                if (root->right == nullptr) {
-                    root->right = new Trie();
-                }
-                root = root->right;
-            } else {
-                if (root->left == nullptr) {
-                    root->left = new Trie();
-                }
-                root = root->left;
-            }
-        }
-    }
-
-    int find(Trie *root, unsigned val) const {
-        auto ans = 0u;
-        for (auto i = 32u; i > 0; --i) {
-            if ((val >> (i - 1)) & 1u) {
-                if (root->left) {
-                    root = root->left;
-                    ans |= 1u << (i - 1);
-                } else {
-                    root = root->right;
-                }
-            } else {
-                if (root->right) {
-                    root = root->right;
-                    ans |= 1u << (i - 1);
-                } else {
-                    root = root->left;
-                }
-            }
-        }
-        return ans;
-    }
-
     int findMaximumXOR(vector<int>& nums) {
-        auto root = new Trie();
-        for (auto const num : nums) {
-            insert(root, num);
-        }
-
-        auto res = INT_MIN;
-        for (auto const num : nums) {
-            res = max(res, find(root, num));
-        }
-        return res;
+        
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
+
+
+// TEST(TestMaximumXOROfTwoNumbersInAnArray, testcase) {
+//     auto sol = Solution();
+// 
+//     auto cases = vector<tuple<..>>{
+//             {},
+//     };
+// 
+//     for (auto & c : cases) {
+//         cout << "testing " << c << "..." << endl;
+//         auto result = sol.foo(get<0>(c));
+//         auto expect = get<1>(c);
+//         ASSERT_EQ(result, expect);
+//     }
+// }

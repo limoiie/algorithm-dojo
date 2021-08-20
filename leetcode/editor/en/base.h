@@ -5,7 +5,9 @@
 #include <memory.h>
 #include <numeric>
 #include <string>
+#include <algorithm>
 #include <memory>
+#include <array>
 #include <vector>
 #include <list>
 #include <array>
